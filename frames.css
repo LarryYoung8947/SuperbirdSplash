@@ -9,12 +9,22 @@
 
 .hero {
   height: auto;
-  min-height: 760px;
-  padding-bottom: 64px;
+  min-height: 650px;
+  padding-bottom: 42px;
 }
 
 .hero-content {
-  padding-bottom: 150px;
+  padding-top: 105px;
+  padding-bottom: 115px;
+}
+
+.hero-content h1 {
+  max-width: 520px;
+  font-size: clamp(3.4rem, 7vw, 6.4rem);
+}
+
+.hero-content h1 span {
+  display: inline-block;
 }
 
 .hero-bird {
@@ -40,8 +50,9 @@
 }
 
 @media (max-width: 800px) {
-  .hero { min-height: 760px; }
-  .hero-content { padding-bottom: 250px; }
+  .hero { min-height: 680px; }
+  .hero-content { padding-top: 82px; padding-bottom: 220px; }
+  .hero-content h1 { max-width: 390px; font-size: clamp(3.3rem, 13vw, 5rem); }
   .hero-bird {
     width: 270px !important;
     height: 180px !important;
