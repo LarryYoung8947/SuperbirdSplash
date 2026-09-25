@@ -9,13 +9,13 @@
 
 .hero {
   height: auto;
-  min-height: 650px;
-  padding-bottom: 42px;
+  min-height: 560px;
+  padding-bottom: 32px;
 }
 
 .hero-content {
-  padding-top: 105px;
-  padding-bottom: 115px;
+  padding-top: 72px;
+  padding-bottom: 88px;
 }
 
 .hero-content h1 {
@@ -23,8 +23,9 @@
   font-size: clamp(3.4rem, 7vw, 6.4rem);
 }
 
-.hero-content h1 span {
-  display: inline-block;
+.hero-content h1 .hero-line {
+  display: block;
+  white-space: nowrap;
 }
 
 .hero-bird {
@@ -50,8 +51,8 @@
 }
 
 @media (max-width: 800px) {
-  .hero { min-height: 680px; }
-  .hero-content { padding-top: 82px; padding-bottom: 220px; }
+  .hero { min-height: 620px; }
+  .hero-content { padding-top: 66px; padding-bottom: 198px; }
   .hero-content h1 { max-width: 390px; font-size: clamp(3.3rem, 13vw, 5rem); }
   .hero-bird {
     width: 270px !important;
