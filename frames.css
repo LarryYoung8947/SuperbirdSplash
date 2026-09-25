@@ -18,11 +18,12 @@
 }
 
 .hero-bird {
-  width: 430px !important;
-  height: 245px !important;
-  top: auto !important;
+  width: 375px !important;
+  height: 250px !important;
+  top: 50% !important;
+  margin-top: -125px;
   right: 5% !important;
-  bottom: 82px !important;
+  bottom: auto !important;
   background-size: 400% 200%;
 }
 
@@ -42,10 +43,12 @@
   .hero { min-height: 760px; }
   .hero-content { padding-bottom: 250px; }
   .hero-bird {
-    width: 310px !important;
-    height: 178px !important;
+    width: 270px !important;
+    height: 180px !important;
+    top: 50% !important;
+    margin-top: -90px;
     right: 1% !important;
-    bottom: 84px !important;
+    bottom: auto !important;
   }
   .feature-bird { height: 230px; }
 }
