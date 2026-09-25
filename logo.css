@@ -1,51 +1,8 @@
-/* Match the medieval display treatment used for Superbird's in-game title. */
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  letter-spacing: .035em;
-}
-
-.brand-word {
-  color: #fff;
-  font-family: "Germania One", Georgia, serif;
-  font-size: 1.95rem;
-  line-height: 1;
-  text-shadow: 2px 2px 0 #0c315f, 3px 3px 0 #ef713f;
-}
-
-.brand-mark {
-  margin-right: 0;
-  color: #fff;
-  font-size: 1.6rem;
-  text-shadow: 1.5px 1.5px 0 #0c315f;
-}
-
-.site-header {
-  background: #122b48;
-}
-
-nav a:not(.nav-button) {
-  color: #fff;
-}
-
-.footer-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: #fff;
-  font-family: "Germania One", Georgia, serif;
-  font-size: 1.65rem;
-  letter-spacing: .035em;
-  text-shadow: 1.5px 1.5px 0 #0c315f, 2.5px 2.5px 0 #ef713f;
-}
-
-.footer-brand .brand-mark {
-  font-family: Nunito, Arial, sans-serif;
-  font-size: 1.4rem;
-}
-
-@media (max-width: 800px) {
-  .brand-word { font-size: 1.55rem; }
-  .footer-brand { font-size: 1.35rem; }
+/* Both brand marks use the same artwork isolated from the original spritesheet. */
+.brand, .footer-brand { display: block; flex: 0 0 auto; }
+.brand img { width: 198px; height: auto; }
+.footer-brand img { width: 184px; height: auto; }
+@media (max-width: 520px) {
+  .brand img { width: 150px; }
+  .footer-brand img { width: 168px; }
 }

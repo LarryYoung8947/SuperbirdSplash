@@ -7,27 +7,29 @@
   <title>Superbird — Take Flight</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Germania+One&family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="logo.css">
   <link rel="stylesheet" href="frames.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Superbird home"><span class="brand-mark">✦</span><span class="brand-word">SUPERBIRD</span></a>
+    <a class="brand" href="#top" aria-label="Superbird home"><img src="assets/superbird-logo.png" alt="Superbird 2.0" width="1774" height="887"></a>
     <nav aria-label="Main navigation"><a href="#worlds">Worlds</a><a href="#about">About</a><a class="nav-button" href="#play">Play soon</a></nav>
   </header>
 
   <main id="top">
     <section class="hero" id="play">
-      <div class="hero-shade"></div>
-      <div class="hero-content">
-        <p class="eyebrow">A bright new flying adventure</p>
-        <h1><span class="hero-line">Take flight.</span><span class="hero-line">Find your way home.</span></h1>
-        <div class="hero-actions"><a class="button primary" href="#worlds">Explore the worlds <span>→</span></a><a class="text-link" href="#about">Meet Superbird <span>↓</span></a></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-layout">
+        <div class="hero-content">
+          <p class="eyebrow">A bright new flying adventure</p>
+          <h1><span class="hero-line">Take flight.</span><span class="hero-line">Find your way home.</span></h1>
+          <div class="hero-actions"><a class="button primary" href="#worlds">Explore the worlds <span>→</span></a><a class="text-link" href="#about">Meet Superbird <span>↓</span></a></div>
+        </div>
+        <div class="hero-art"><div class="bird-frame hero-bird" role="img" aria-label="Superbird flying with his red cape"></div></div>
       </div>
-      <div class="bird-frame hero-bird" role="img" aria-label="Superbird flying"></div>
-      <div class="hero-scroll">SCROLL TO EXPLORE <span>↓</span></div>
+      <a class="hero-scroll" href="#about">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
     </section>
 
     <section class="intro" id="about">
@@ -47,7 +49,7 @@
     <section class="feature"><div class="feature-art"><div class="bird-frame feature-bird" role="img" aria-label="Superbird flapping through the sky"></div></div><div class="feature-copy"><p class="eyebrow orange">FLY YOUR OWN WAY</p><h2>Every second<br>is yours to master.</h2><p>Thread the spaces between danger. Build your energy. When the bar is full, Superbird powers up and the sky changes with you.</p><a class="button dark" href="#top">Back to the top <span>↑</span></a></div></section>
   </main>
 
-  <footer><div class="footer-brand"><span class="brand-mark">✦</span> SUPERBIRD</div><p>Made for curious players and fearless flyers.</p><span class="copyright">© 2026 Superbird</span></footer>
+  <footer><a class="footer-brand" href="#top" aria-label="Superbird home"><img src="assets/superbird-logo.png" alt="Superbird 2.0" width="1774" height="887" loading="lazy"></a><p>Made for curious players and fearless flyers.</p><span class="copyright">© 2026 Superbird</span></footer>
   <script src="script.js"></script>
 </body>
 </html>

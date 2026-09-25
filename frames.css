@@ -1,66 +1,52 @@
-/* Show one large frame from the existing 4 x 2 Superbird animation sheet. */
+/* Preserve the first bird's native proportions.
+   Sheet: 1536 x 1024. Visible window: x=8, y=132, width=380, height=304. */
 .bird-frame {
-  background-image: url("assets/superbird-flight.png");
-  background-repeat: no-repeat;
-  background-size: 400% 200%;
-  background-position: 0 0;
-  background-color: transparent;
+  aspect-ratio: 380 / 304;
+  background: url("assets/superbird-flight.png") no-repeat;
+  background-size: 404.210526% 336.842105%;
+  background-position: .692042% 18.333333%;
 }
-
 .hero {
-  height: auto;
-  min-height: 476px;
-  padding-bottom: 32px;
+  position: relative;
+  isolation: isolate;
+  color: white;
+  background: url("assets/hero-fields.png") center bottom / cover no-repeat,
+              url("assets/hero-sky.png") center / cover no-repeat;
 }
-
-.hero-content {
-  padding-top: 72px;
-  padding-bottom: 88px;
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, #0b2a4cde, #0b2a4c8c 48%, #0b2a4c12 90%);
 }
-
-.hero-content h1 {
-  max-width: 520px;
-  font-size: clamp(3.4rem, 7vw, 6.4rem);
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr);
+  gap: clamp(20px, 4vw, 64px);
+  align-items: center;
+  max-width: 1440px;
+  min-height: 430px;
+  margin: auto;
+  padding: 46px var(--gutter) 76px;
 }
-
-.hero-content h1 .hero-line {
-  display: block;
-  white-space: nowrap;
+.hero-content { min-width: 0; }
+.hero-line { display: block; white-space: nowrap; }
+.hero-line:last-child { color: #b4eaff; }
+.hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 16px 26px; margin-top: 28px; font-size: .9rem; }
+.text-link { font-weight: 900; }
+.hero-art { display: grid; place-items: center; min-width: 0; }
+.hero-bird { width: min(100%, 330px); filter: drop-shadow(0 18px 12px #10264144); animation: bird-hover 5s ease-in-out infinite; }
+.hero-scroll { position: absolute; bottom: 20px; left: max(var(--gutter), calc((100% - 1440px) / 2 + var(--gutter))); font-size: .64rem; letter-spacing: .18em; font-weight: 900; }
+.hero-scroll span { margin-left: 10px; font-size: 1rem; }
+.feature-bird { width: min(100%, 360px); filter: drop-shadow(0 22px 20px #4e292244); animation: bird-hover 6s ease-in-out infinite; }
+@keyframes bird-hover {
+  0%, 100% { transform: translateY(5px); }
+  50% { transform: translateY(-5px); }
 }
-
-.hero-bird {
-  width: 253px !important;
-  height: 168px !important;
-  top: 50% !important;
-  margin-top: -125px;
-  right: 5% !important;
-  bottom: auto !important;
-  background-size: 400% 200%;
-}
-
-.hero-scroll {
-  bottom: 24px;
-}
-
-.feature-bird {
-  width: min(560px, 92%);
-  height: 330px;
-  background-size: 400% 200%;
-  filter: drop-shadow(0 22px 24px rgba(78, 41, 34, .25));
-  animation: float 5s ease-in-out infinite;
-}
-
-@media (max-width: 800px) {
-  .hero { min-height: 527px; }
-  .hero-content { padding-top: 66px; padding-bottom: 198px; }
-  .hero-content h1 { max-width: 390px; font-size: clamp(3.3rem, 13vw, 5rem); }
-  .hero-bird {
-    width: 183px !important;
-    height: 122px !important;
-    top: 50% !important;
-    margin-top: -90px;
-    right: 1% !important;
-    bottom: auto !important;
-  }
-  .feature-bird { height: 230px; }
+@media (max-width: 780px) {
+  .hero-layout { grid-template-columns: 1fr; min-height: 0; gap: 24px; padding: 36px var(--gutter) 62px; }
+  .hero-content h1 { font-size: clamp(1.5625rem, 6.7vw, 3rem); }
+  .hero-art { justify-items: end; padding-right: 4%; }
+  .hero-bird { width: clamp(180px, 38vw, 260px); }
+  .hero-actions { margin-top: 22px; }
 }
