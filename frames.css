@@ -1,0 +1,51 @@
+/* Show one large frame from the existing 4 x 2 Superbird animation sheet. */
+.bird-frame {
+  background-image: url("assets/superbird-flight.png");
+  background-repeat: no-repeat;
+  background-size: 400% 200%;
+  background-position: 0 0;
+  background-color: transparent;
+}
+
+.hero {
+  height: auto;
+  min-height: 760px;
+  padding-bottom: 64px;
+}
+
+.hero-content {
+  padding-bottom: 150px;
+}
+
+.hero-bird {
+  width: 430px !important;
+  height: 245px !important;
+  top: auto !important;
+  right: 5% !important;
+  bottom: 82px !important;
+  background-size: 400% 200%;
+}
+
+.hero-scroll {
+  bottom: 24px;
+}
+
+.feature-bird {
+  width: min(560px, 92%);
+  height: 330px;
+  background-size: 400% 200%;
+  filter: drop-shadow(0 22px 24px rgba(78, 41, 34, .25));
+  animation: float 5s ease-in-out infinite;
+}
+
+@media (max-width: 800px) {
+  .hero { min-height: 760px; }
+  .hero-content { padding-bottom: 250px; }
+  .hero-bird {
+    width: 310px !important;
+    height: 178px !important;
+    right: 1% !important;
+    bottom: 84px !important;
+  }
+  .feature-bird { height: 230px; }
+}
