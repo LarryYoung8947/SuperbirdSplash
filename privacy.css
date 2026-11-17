@@ -1,0 +1,12 @@
+.privacy-page { font-family: Arial, sans-serif; }
+.privacy-page h1, .privacy-page h2 { font-family: Arial, sans-serif; letter-spacing: -.02em; }
+.back-link { font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+.policy-content { max-width: 850px; margin: 0 auto; padding: 48px 24px 72px; overflow-wrap: anywhere; }
+.policy-content h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 24px; line-height: 1.15; }
+.policy-content h2 { font-size: 1.4rem; margin: 36px 0 14px; line-height: 1.3; }
+.policy-content p { margin: 0 0 18px; line-height: 1.8; }
+.policy-content a { color: #12558e; text-decoration: underline; text-underline-offset: 3px; }
+.privacy-page footer a { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 520px) {
+  .privacy-page .site-header { flex-wrap: wrap; padding-bottom: 16px; }
+}
